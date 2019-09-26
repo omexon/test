@@ -8,4 +8,9 @@ class Installer
     {
         print(__CLASS__ . '::' . __FUNCTION__ . "\n");
     }
+
+    public static function postAutoloadDump()
+    {
+        print(__CLASS__ . '::' . __FUNCTION__ . "\n");
+    }
 }
