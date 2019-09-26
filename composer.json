@@ -1,0 +1,26 @@
+{
+    "name": "omexon/test",
+    "type": "library",
+    "description": "Test repository (nothing useful here....)",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "symfony/console": "^4.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Omexon\\Test\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Omexon\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-package-install": "Omexon\\Test\\Installer::postPackageInstall"
+    }
+}

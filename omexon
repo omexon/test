@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+use Omexon\Test\Console\Application;
+
+$paths = [
+    dirname(dirname(dirname(__DIR__))) . '/vendor', // Root of project.
+    __DIR__ . '/vendor' // Package.
+];
+foreach ($paths as $path) {
+    if (file_exists($path . '/autoload.php')) {
+        require_once($path . '/autoload.php');
+        break;
+    }
+}
+
+try {
+    if (!class_exists('Composer\Autoload\ClassLoader')) {
+        throw new Exception('Could not load composer.');
+    }
+
+    $application = new Application('Developer', '');
+    $application->run();
+} catch (Exception $exception) {
+    print($exception->getMessage() . "\n");
+}
