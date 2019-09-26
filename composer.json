@@ -22,6 +22,8 @@
     },
     "scripts": {
         "post-package-install": "Omexon\\Test\\Installer::postPackageInstall",
-        "post-autoload-dump": "Omexon\\Test\\Installer::postAutoloadDump"
+        "post-package-update": "Omexon\\Test\\Installer::postPackageUpdate",
+        "post-autoload-dump": "Omexon\\Test\\Installer::postAutoloadDump",
+        "post-update-cmd": "Omexon\\Test\\Installer::postUpdate"
     }
 }
